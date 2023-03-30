@@ -10,4 +10,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\StudentManagementSystem.Application\StudentManagementSystem.Application.csproj" />
+    <ProjectReference Include="..\StudentManagementSystem.Domain\StudentManagementSystem.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

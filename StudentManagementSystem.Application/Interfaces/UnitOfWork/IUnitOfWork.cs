@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StudentManagementSystem.Application.Interfaces.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,8 @@ namespace StudentManagementSystem.Application.Interfaces.UnitOfWork
 {
     public interface IUnitOfWork
     {
+        IEnrolmentRepository EnrolmentRepository { get; }
+        IStudentRepository StudentRepository { get; }
+        Task CommitAsync();
     }
 }
