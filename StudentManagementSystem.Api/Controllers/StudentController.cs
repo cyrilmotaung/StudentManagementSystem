@@ -37,7 +37,7 @@ namespace StudentManagementSystem.UI.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(int id, Student student)
         {
-            if (id != student.Id)
+            if (id != student.StudentId)
             {
                 return BadRequest();
             }
@@ -56,7 +56,7 @@ namespace StudentManagementSystem.UI.Controllers
                 return NotFound();
             }
 
-            await _studentService.DeleteStudentAsync(id);
+            await _studentService.DeleteStudentAsync(student);
 
             return NoContent();
         }

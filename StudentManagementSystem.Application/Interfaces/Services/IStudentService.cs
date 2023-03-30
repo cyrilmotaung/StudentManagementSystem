@@ -13,6 +13,6 @@ namespace StudentManagementSystem.Application.Interfaces.Services
         Task<Student> GetStudentByIdAsync(int id);
         Task AddStudentAsync(Student student);
         Task UpdateStudentAsync(Student student);
-        Task DeleteStudentAsync(int id);
+        Task DeleteStudentAsync(Student student);
     }
 }

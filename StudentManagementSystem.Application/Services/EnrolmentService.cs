@@ -23,9 +23,9 @@ namespace StudentManagementSystem.Application.Services
             await _unitOfWork.CommitAsync();
         }
 
-        public async Task DeleteEnrolmentAsync(int id)
+        public async Task DeleteEnrolmentAsync(Enrolment enrolment)
         {
-            await _unitOfWork.EnrolmentRepository.DeleteAsync(id);
+            await _unitOfWork.EnrolmentRepository.DeleteAsync(enrolment);
             await _unitOfWork.CommitAsync();
         }
 

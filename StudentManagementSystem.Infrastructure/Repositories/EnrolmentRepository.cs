@@ -31,7 +31,7 @@ namespace StudentManagementSystem.Infrastructure.Repositories
 
         public async Task<Enrolment> GetByIdAsync(int id)
         {
-            return await Enrolments.Where(e => e.Id == Id).ToListAsync();
+            throw new NotImplementedException();
         }
 
         public Task UpdateAsync(Enrolment entity)

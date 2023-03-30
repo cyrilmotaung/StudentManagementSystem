@@ -13,6 +13,6 @@ namespace StudentManagementSystem.Application.Interfaces.Services
         Task<Enrolment> GetEnrolmentByIdAsync(int id);
         Task AddEnrolmentAsync(Enrolment enrolment);
         Task UpdateEnrolmentAsync(Enrolment enrolment);
-        Task DeleteEnrolmentAsync(int id);
+        Task DeleteEnrolmentAsync(Enrolment enrolment);
     }
 }

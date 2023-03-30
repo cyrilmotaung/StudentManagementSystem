@@ -60,7 +60,7 @@ namespace StudentManagementSystem.UI.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Enrolment enrolment)
         {
-            if (id != enrolment.Id)
+            if (id != enrolment.EnrolmentId)
             {
                 return BadRequest();
             }
@@ -95,7 +95,7 @@ namespace StudentManagementSystem.UI.Controllers
                 return NotFound();
             }
 
-            await _enrolmentService.DeleteEnrolmentAsync(id);
+            await _enrolmentService.DeleteEnrolmentAsync(enrolment);
             return RedirectToAction(nameof(Index));
         }
     }
